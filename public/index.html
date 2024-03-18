@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>React App</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      background-color: rgb(197, 194, 253);
+    }
+
+    .inputContainer {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 15rem;
+    }
+
+    textarea {
+      resize: none;
+      width: 100%;
+      border-width: 2px;
+      border-radius: 5px
+    }
+
+    .actionBtns {
+      width: 100%;
+      display: flex;
+      gap: 3rem;
+    }
+
+    button {
+      width: 10rem;
+      height: 3rem;
+      background-color: rgb(75, 126, 226);
+      border-radius: 1rem;
+      border-width: 2px;
+      transition: background-color 0.3s;
+      /* Smooth transition for color change */
+    }
+
+    button:hover {
+      background-color: transparent;
+      /* Change background color to transparent on hover */
+    }
+  </style>
+  </head>
+
+  <body>
+    <div class="inputContainer">
+      <h3>Enter the Node values here:</h3>
+      <textarea class="input" rows="5" style="padding: 0.5rem;"></textarea>
+      <div class="actionBtns">
+        <button class="applyBtn">Apply</button>
+        <button class="clearBtn">Clear</button>
+      </div>
+    </div>
+    <canvas></canvas>
+    <script type="module" src="./drawBinaryTree.js"></script>
+
+  </body>
+
+</html>
